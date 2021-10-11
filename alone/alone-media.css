@@ -1,0 +1,143 @@
+@media screen and (max-width: 1024px) {
+  .life-dv-media,
+  .menu-dv-media {
+    display: none;
+  }
+  .popup-left-menu ul {
+    padding: 0px 75px;
+  }
+  .left-menu-show {
+    margin: 38px 0;
+  }
+  .gift {
+    margin-top: 250px;
+  }
+  .gift-header {
+    margin-left: 220px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .small-img ul {
+    width: 570px;
+  }
+  .small-img img {
+    width: 300px;
+  }
+  .life-dv-media,
+  .menu-dv-media {
+    display: none;
+  }
+  .popup-left-menu ul {
+    padding: 0px 44px;
+  }
+  .box span:last-child {
+    margin-top: 2px;
+  }
+  .gift {
+    margin-top: 170px;
+  }
+  .gift-header {
+    margin-left: 290px !important;
+  }
+  .header-h {
+    margin-left: 34px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .slide_wrap {
+    padding-bottom: 0;
+  }
+  .small-img ul {
+    width: 380px;
+  }
+  .small-img img {
+    width: 260px;
+  }
+  .header-small h4 {
+    padding: 0 4px !important;
+  }
+  .life-contents {
+    flex-direction: column;
+  }
+  .life-content-span {
+    width: 100%;
+  }
+  .black-bar,
+  .right-dv-media {
+    display: none;
+  }
+  .dv-media-login {
+    margin: 0 30px;
+    display: block;
+    font-size: 0.8rem;
+  }
+  .header-main {
+    flex-direction: column;
+  }
+  .header-right li {
+    padding: 0;
+  }
+  .popup-dv-input {
+    display: block;
+  }
+  #media-main-search {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .popup-left-menu {
+    flex-direction: column;
+    margin: 7px 0;
+    padding: 14px;
+  }
+  .popup-left-menu ul {
+    padding: 0px 9px;
+  }
+  .popup-left-menu h4 {
+    margin-bottom: 0;
+  }
+  .gift {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+  }
+  .gift-header {
+    margin-left: 20px !important;
+    padding: 0 3px;
+  }
+  .for-man,
+  .for-woman {
+    width: 350px;
+  }
+  .header-h {
+    margin-left: 13px;
+  }
+
+  .delivery {
+    flex-direction: column;
+  }
+  .delivery-header {
+    margin-left: 45px;
+  }
+  .box {
+    margin-bottom: 4px;
+  }
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    margin-top: 50px;
+  }
+  .footer-block {
+    width: 300px;
+  }
+  .footer-bottom-notice span {
+    padding: 0 20px;
+  }
+}
