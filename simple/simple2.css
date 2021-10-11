@@ -1,0 +1,530 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Playfair Display", serif;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.sidetag {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  transform: translateX(-30%);
+  top: 16rem;
+  z-index: 9;
+}
+.item,
+.item1,
+.item2,
+.item3 {
+  border: 1px solid #111;
+  width: 10px;
+  height: 10px;
+  margin: 10px;
+  z-index: 9;
+  cursor: pointer;
+}
+.tooltip {
+  position: relative;
+  display: block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 57px;
+  /* background-color: black; */
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  position: absolute;
+  z-index: 10;
+  text-align: right;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltip .tooltiptext::after {
+  /* content: " "; */
+  position: absolute;
+  border-style: solid;
+  border-width: 5px;
+}
+.tooltip .tooltip-home,
+.tooltip .tooltip-about,
+.tooltip .tooltip-faq,
+.tooltip .tooltip-sub {
+  top: -5px;
+  right: 160%;
+}
+
+.tooltip .tooltip-left::after {
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-color: transparent transparent transparent black;
+}
+.tooltip span {
+  font-size: 11px;
+}
+/*section 0*/
+.section-s {
+  background-color: #d78655;
+  height: 665px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  z-index: 999;
+}
+.logo a {
+  text-decoration: none;
+  color: #111;
+}
+.logo span {
+  font-size: 2rem;
+  margin-left: 20px;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-menu li {
+  font-size: 0.8rem;
+  padding: 15px 8px;
+}
+.nav-menu li a {
+  color: #111;
+  position: relative;
+  margin-right: 10px;
+  z-index: 999;
+}
+.nav-menu li a:before {
+  background-color: #8b000f;
+  content: "";
+  position: absolute; /*before를 절대위치*/
+  height: 2px;
+  width: 0;
+  bottom: -10px; /*bottom을 주어, 글자 밑에 위치시킴*/
+  transition: 0.5s; /*가상클래스에 이벤트 발생시 시간 지정*/
+  left: 50%; /*만약 왼쪽에서부터 커지게하려면-> left를 0으로 두면 됨*/
+  transform: translateX(-50%);
+}
+.nav-menu li a:hover:before {
+  /*hover시 width:0 -> 100%가 됨*/
+  width: 100%;
+}
+.sticky {
+  position: fixed;
+  right: 10px;
+  z-index: 999;
+}
+.line {
+  display: flex;
+  justify-content: center;
+}
+.top-line {
+  width: 98%;
+  border: thin solid black;
+  /* align-items: center; */
+}
+main {
+  display: flex;
+  margin-top: 180px;
+}
+.main-text {
+  font-size: 4rem;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  text-align: left;
+}
+.main-text p {
+  z-index: 99;
+}
+/*image*/
+.main-text a {
+  color: #111;
+  text-decoration: none;
+  position: relative;
+}
+.bg {
+  position: absolute;
+  left: 1px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 500px;
+  transition: all 0.3s ease-out;
+}
+.bg-show .bg {
+  opacity: 1;
+  z-index: 1;
+}
+.main-text a:hover {
+  z-index: 2;
+  border-bottom-color: transparent;
+  color: #fff;
+}
+.main-text a:hover:before {
+  transform: translate(-50%, -50% scaleX(1));
+}
+/*-------section1-----------------------*/
+#section1,
+#section2,
+#section3 {
+  display: flex;
+  justify-content: center;
+  margin: 13px 0;
+}
+.section-s1,
+.section-s2,
+.section-s3 {
+  width: 98%;
+  height: 660px;
+}
+/*-----1111111111------------*/
+.section-s1 {
+  background-color: #a9b2bc;
+}
+.about {
+  height: 100%;
+  width: 400px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about span {
+  font-size: 3rem;
+}
+.about i {
+  font-size: 2rem;
+}
+.about a {
+  color: #111;
+  position: relative;
+}
+.about a:before {
+  background-color: #8b000f;
+  content: "";
+  position: absolute; /*before를 절대위치*/
+  height: 2px;
+  width: 0;
+  bottom: -10px; /*bottom을 주어, 글자 밑에 위치시킴*/
+  transition: 0.5s; /*가상클래스에 이벤트 발생시 시간 지정*/
+  left: 50%; /*만약 왼쪽에서부터 커지게하려면-> left를 0으로 두면 됨*/
+  transform: translateX(-50%);
+}
+.about a:hover:before {
+  width: 100%;
+}
+.about2 {
+  /* height: 100%; */
+  height: 470px;
+  width: 97%;
+  display: block;
+  text-align: right;
+  margin-top: 80px;
+}
+.about2 span {
+  font-size: 1.8rem;
+  vertical-align: super;
+}
+
+#s1menu {
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  margin-right: 80px;
+}
+.s1-menu ul {
+  margin-right: 80px;
+}
+.s1-menu2 ul {
+  margin-right: 80px;
+}
+.s1-menu a,
+.s1-menu2 a {
+  color: #111;
+}
+/*2222222222222222222*/
+.section-s2 {
+  background-color: #5a7467;
+}
+.faq {
+  height: 100%;
+  width: 400px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.faq span {
+  font-size: 3rem;
+}
+.faq i {
+  font-size: 2rem;
+}
+.faq a {
+  color: #111;
+  position: relative;
+}
+.faq a:before {
+  background-color: #8b000f;
+  content: "";
+  position: absolute; /*before를 절대위치*/
+  height: 2px;
+  width: 0;
+  bottom: -10px; /*bottom을 주어, 글자 밑에 위치시킴*/
+  transition: 0.5s; /*가상클래스에 이벤트 발생시 시간 지정*/
+  left: 50%; /*만약 왼쪽에서부터 커지게하려면-> left를 0으로 두면 됨*/
+  transform: translateX(-50%);
+}
+.faq a:hover:before {
+  width: 100%;
+}
+#faq {
+  /* margin-top: 50px; */
+}
+.faq-box {
+  width: 50%;
+  height: 500px;
+  float: right;
+  margin-right: 20px;
+  margin-top: 65px;
+}
+.panel-body {
+  padding: 12px;
+  display: none;
+}
+.active .panel-body {
+  display: block;
+}
+#btn-collapse {
+  margin-bottom: 10px;
+  background-color: #999;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px;
+  float: right;
+  margin-top: 55px;
+}
+#btn-collapse span {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+.panel-heading {
+  border: 1.4px solid #111;
+  color: #111;
+  margin-top: 3px;
+  padding: 3px;
+}
+.panel-heading:hover {
+  background-color: rgb(28, 46, 46);
+  color: #fff;
+}
+
+/*3333333333*/
+.section-s3 {
+  background-color: #bfbaad;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.sub-and {
+  display: flex;
+  justify-content: center;
+}
+.sub-and input {
+  font-size: 2rem;
+}
+.sub-and input,
+button {
+  outline: none;
+  background: none;
+  border: none;
+}
+.sub-and button {
+  border: 1px solid #111;
+  border-radius: 50px;
+  padding: 7px;
+  margin: 15px;
+  cursor: pointer;
+}
+.sub-and button:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #d78655;
+}
+.subscribe span {
+  font-size: 4rem;
+  /* margin-bottom: 10px; */
+}
+.sub-popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.198);
+}
+.popup-content {
+  margin: 15% auto;
+  padding: 30px;
+  border: 1px solid #d78655;
+  width: 50%;
+}
+.close {
+  color: #111;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*toooooop btt*/
+#backtotop {
+  position: fixed;
+  bottom: 0;
+  right: 2rem;
+  background-color: #98948b;
+  color: #111;
+  border: none;
+  padding: 1em;
+  /* text-decoration: uppercase; */
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  opacity: 0;
+  text-decoration: none;
+  font-size: 0.75em;
+}
+#backtotop:hover {
+  background-color: #d78655;
+}
+#backtotop.visible {
+  opacity: 1;
+}
+@media (min-width: 769px) and (max-width: 991px) {
+  .section-s1 {
+    overflow: scroll;
+  }
+  #s1menu {
+    display: none;
+  }
+  .about2 {
+    margin-top: 20px;
+  }
+  #faq {
+    overflow: scroll;
+  }
+  .faq {
+    height: 10%;
+    float: none;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin-top: 15px;
+  }
+  .faq-box {
+    width: 90%;
+    height: 500px;
+    float: none;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #s1menu {
+    display: none;
+  }
+  .about2 {
+    margin-top: 20px;
+  }
+  .about2 span {
+    font-size: 1.4rem;
+  }
+  .sidetag {
+    z-index: 100;
+  }
+  #faq {
+    overflow: scroll;
+  }
+  .faq {
+    height: 10%;
+    float: none;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin-top: 15px;
+  }
+  .faq-box {
+    width: 90%;
+    height: 500px;
+    float: none;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .subscribe span {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main-text {
+    font-size: 2.8rem;
+  }
+  .main-text p a:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+  }
+  .about {
+    height: 10%;
+    float: none;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin-top: 15px;
+  }
+  .about2 {
+    text-align: left;
+    margin-left: 10px;
+  }
+  #faq {
+    overflow: scroll;
+  }
+  .sub-and input {
+    font-size: 1rem;
+    width: 200px;
+  }
+  .subscribe span {
+    display: flex;
+    text-align: center;
+  }
+  .sub-popup {
+    top: 139px;
+  }
+}
